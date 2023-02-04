@@ -6,6 +6,9 @@ const nextAge = document.querySelector(".container > p > span");
 
 inputAge.addEventListener("keyup", () => {
   let val = inputAge.value;
+  if (val === '') {
+    return 0;
+  }
   
   nextAge.textContent = 2023 - Number.parseInt(val, 10) + ' ' + 'years.';
 });
